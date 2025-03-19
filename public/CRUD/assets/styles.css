@@ -8,6 +8,16 @@ body {
   align-items: center;
   height: 100vh;
 }
+.firstContaner {
+  display: flex;
+  flex-direction: column;
+}
+.logoHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 .container {
   background: #fff;
@@ -16,6 +26,7 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   width: 400px;
   text-align: center;
+  margin-bottom: 53px;
 }
 
 h1 {
@@ -58,7 +69,9 @@ td {
 th {
   background: #f8f9fa;
 }
-
+button.delete {
+  background: #dc3545;
+}
 .actions button {
   margin: 0 5px;
   padding: 5px 10px;
@@ -70,7 +83,7 @@ th {
 }
 
 .actions button.delete {
-  background: #dc3545;
+  background: #77ff00;
 }
 
 .actions button:hover {

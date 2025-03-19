@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase CRUD App | SumanOnline.Com</title>
+    <link rel="shortcut icon" href="./assets/img/fav.PNG" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="firstContaner">
+      <div class="logoHeader">
+        <img src="./assets/img/website.png" width="250px" alt="SumanOnline" />
+      </div>
+      <div class="container">
+        <h1>Firebase CRUD App</h1>
+
+        <form id="dataForm">
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="text" id="age" placeholder="Age" required />
+          <button type="submit" id="submitBtn">Add Data</button>
+        </form>
+
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <script type="module" src="assets/app.js"></script>
+    </div>
+    <div id="footer">
+      <p style="font-size: 0.7rem; text-align: center">
+        &copy; 2018-<span id="copyright"></span>
+        <span id="copyright">
+          <script>
+            document
+              .getElementById("copyright")
+              .appendChild(document.createTextNode(new Date().getFullYear()));
+          </script>
+        </span>
+        <a
+          href="https://sumanonline.com "
+          target="_blank"
+          style="text-decoration: none; font-weight: bold"
+          >SumanOnline.com</a
+        >
+        | All Rights Reserved.
+      </p>
+    </div>
+  </body>
+</html>

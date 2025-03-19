@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Projects | SumanOnline.Com</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Firebase CRUD App</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="shortcut icon"
-      href="https://sumanonline.likesyou.org/SumanPhotoGallery/fav/apple-icon-57x57.png"
-      type="image/x-icon"
-    />
+    <link rel="stylesheet" href="https://sumanonline.com/Projects/styles.css" />
+    <link rel="shortcut icon" href="./assets/img/fav.PNG" type="fevicon" />
   </head>
   <body>
-    <div class="container">
-      <h1>Firebase CRUD App</h1>
-
-      <!-- Form for Creating and Updating Data -->
-      <form id="dataForm">
-        <input type="text" id="name" placeholder="Name" required />
-        <input type="text" id="age" placeholder="Age" required />
-        <button type="submit" id="submitBtn">Add Data</button>
-      </form>
-
-      <!-- Display Data -->
-      <table id="dataTable">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Data will be inserted here dynamically -->
-        </tbody>
-      </table>
+    <div id="mainHead">
+      <h1>Suman-Projects.web.app</h1>
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
     </div>
-
-    <!-- Firebase and App Scripts -->
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js"></script>
-    <script src="app.js"></script>
+    <div id="mainCont">
+      <div class="project-card">
+        <a href="./CRUD/" class="neon-loader">
+          <img src="./assets/img/crud.png" alt="... Thumbnail" />
+          <span>Firebase CRUD</span>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="/Projects/Voice/" class="neon-loader">
+          <img src="./CRUD/assets/img/fav.png" alt="... Thumbnail" />
+          <span>...</span>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="/Projects/Voice/" class="neon-loader">
+          <img src="./CRUD/assets/img/fav.png" alt="... Thumbnail" />
+          <span>...</span>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="/Projects/Voice/" class="neon-loader">
+          <img src="./CRUD/assets/img/fav.png" alt="... Thumbnail" />
+          <span>...</span>
+        </a>
+      </div>
+    </div>
     <div id="footer">
       <p style="font-size: 0.7rem; text-align: center">
         &copy; 2018-<span id="copyright"></span>
@@ -60,5 +57,26 @@
         | All Rights Reserved.
       </p>
     </div>
+
+    <!-- JavaScript for Dark/Light Mode -->
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const body = document.body;
+
+      // Check localStorage for theme preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        body.classList.add(savedTheme);
+        themeToggle.textContent = savedTheme === "dark-mode" ? "☀️" : "🌙";
+      }
+
+      // Toggle theme
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        const isDarkMode = body.classList.contains("dark-mode");
+        themeToggle.textContent = isDarkMode ? "☀️" : "🌙";
+        localStorage.setItem("theme", isDarkMode ? "dark-mode" : "light-mode");
+      });
+    </script>
   </body>
 </html>
